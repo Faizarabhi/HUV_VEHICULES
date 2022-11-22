@@ -17,6 +17,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(errorHandler)
 app.use('/api/cars',require('./routes/carRouter'))
+app.use('/api/users',require('./routes/userRouter'))
 
 
 app.listen(port, ()=>{ 
