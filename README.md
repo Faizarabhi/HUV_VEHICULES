@@ -5,7 +5,7 @@
 
 <div align="center">
   <a >
-    <img src="https://www.namx-hydrogen.com/svg/logo-namx.svg" alt="Logo" style="background:repeating-radial-gradient(black, transparent 100px);" width="80" height="80">
+    <img src="https://www.namx-hydrogen.com/svg/logo-namx.svg" alt="Logo" style="background-color:repeating-radial-gradient(black, transparent 100px)!important;" width="80" height="80">
   </a>
 
   <h3 align="center">README-Template</h3>
