@@ -30,6 +30,21 @@ la demande du CEO & Founder at NamX c'est de partage l'expérience immersive de 
 - [Certifications](#certifications)
 - [Commandeline](#commandeline)
 - [Built With](#built)
+- <!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#certifications">certifications</a>
+      <ul>
+        <li><a href="#commandeline">commandeline</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#built">built</a>
+    </li>
+  </ol>
+</details>
 
 
 ### Certifications
