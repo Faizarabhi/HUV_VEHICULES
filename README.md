@@ -34,17 +34,17 @@ la demande du CEO & Founder at NamX c'est de partage l'expérience immersive de 
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
+        <li>
       <a href="#certifications">certifications</a>
-      <ul>
-        <li><a href="#commandeline">commandeline</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#built">built</a>
-    </li>
-  </ol>
-</details>
+        </li>
+        <li>
+          <a href="#commandeline">commandeline</a>
+      </li>
+      <li>
+        <a href="#built">built</a>
+      </li>
+    </ol>
+ </details>
 
 
 ### Certifications
