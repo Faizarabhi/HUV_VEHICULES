@@ -8,7 +8,7 @@
     <img src="	https://www.namx-hydrogen.com/svg/logo-namx.svg" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">README-Template</h3>
 
   <p align="center">
   This is Awsome Project
