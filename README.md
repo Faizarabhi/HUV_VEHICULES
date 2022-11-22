@@ -26,3 +26,15 @@ la demande du CEO & Founder at NamX c'est de partage l'expérience immersive de 
 npm init
 ```
 <p align="right"><a href="#start"><img width="45rem" src="https://raw.githubusercontent.com/xnbox/DeepfakeHTTP/main/img/top.png"></a></p>
+
+
+
+
+
+
+<h2 id="credits"> :scroll: Credits</h2>
+
+Faiza RABHI
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Faizarabhi)
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/faiza-rabhi/)
