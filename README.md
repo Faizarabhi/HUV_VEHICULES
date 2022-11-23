@@ -23,8 +23,6 @@ du NAMX HUV la plus grand SUV à pile à combustible. Annonçant jusqu’à 800 
 
 la demande du CEO & Founder at NamX c'est de partage l'expérience immersive de la plus grand HUV .
 
-
-![HUV_VEHICULES Social Banner](https://www.namx-hydrogen.com/img/home/suv-hydrogene-1920w.webp)
 ## Table of Contents
 
 - [Certifications](#certifications)
@@ -45,6 +43,9 @@ la demande du CEO & Founder at NamX c'est de partage l'expérience immersive de 
       </li>
     </ol>
  </details>
+ 
+![HUV_VEHICULES Social Banner](https://www.namx-hydrogen.com/img/home/suv-hydrogene-1920w.webp)
+
 
 
 ### Certifications
