@@ -1,9 +1,56 @@
 const { text } = require('express')
+const Car = require('../models/carModel')
+
 
 
 const getCars = async(req,res)=>{
-    res.status(200).json("hello from controller")
-    console.log("hello from controller")
+    try{
+        const care = await Car.find();
+        res.json(care);
+          }catch(err){
+            res.json({message: err});
+          }
 }
 
-module.exports = {getCars}
+const AddCar = async (req,res)=>{
+       
+        const Cars = await Car.create({
+        Name: req.body.Name,
+        MaxSped: req.body.MaxSped,
+        KmRange: req.body.KmRange,
+        HorsPower: req.body.HorsPower,
+        Prix: req.body.Prix,
+        Type: req.body.Type
+        })
+        res.status(200).json(Cars)
+    }
+    
+    const UpdateCars = async (req,res)=>{
+        const Cars = await Car.findById(req.params.id)
+        !Cars? res.status(400) &&  Error('Car Not found'): null;
+        const UpdateCrs = await Car.findByIdAndUpdate(req.params.id,req.body,{ new : true})
+        res.status(200).json(UpdateCrs)
+    
+    }
+
+    const deleteCar = async (req,res)=>{
+        const Cars = await Car.findById(req.params.id)
+        if(!Cars){
+            res.status(400)
+            throw new Error('grandbus Not found')
+        }
+        
+     
+    
+        await Cars.remove()
+        res.status(200).json({id : req.params.id})
+    }
+
+
+
+
+
+
+
+
+module.exports = {getCars, AddCar, UpdateCars,deleteCar }

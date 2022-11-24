@@ -1,6 +1,7 @@
 
 
 // USER
+###
 POST http://localhost:8000/api/users/login
 
 
@@ -8,6 +9,25 @@ POST http://localhost:8000/api/users/login
 
 
 // CAR 
+###
+//Aficher Tous Les car
+GET localhost:8000/api/cars
+###
+//Ajouter Car
+POST localhost:8000/api/cars
+
+###
+//Moudifier Car
+PUT   localhost:8000/api/cars/637de215ab2a600ddfd5d2a6
+
+###
+//Deleteun car 
+DELETE  localhost:8000/api/cars/637de215ab2a600ddfd5d2a6
+
+
+
+
+
 
 
 // RESERVATION
