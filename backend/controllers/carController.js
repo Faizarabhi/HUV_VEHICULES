@@ -24,6 +24,7 @@ const AddCar = async (req,res)=>{
         })
         res.status(200).json(Cars)
     }
+    
     const UpdateCars = async (req,res)=>{
         const Cars = await Car.findById(req.params.id)
         !Cars? res.status(400) &&  Error('Car Not found'): null;
@@ -39,8 +40,7 @@ const AddCar = async (req,res)=>{
             throw new Error('grandbus Not found')
         }
         
-        // Make sure the user is admin
-       
+     
     
         await Cars.remove()
         res.status(200).json({id : req.params.id})
