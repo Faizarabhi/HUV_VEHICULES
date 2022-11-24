@@ -16,15 +16,11 @@ const AddCar = async (req,res)=>{
        
         const Cars = await Car.create({
         Name: req.body.Name,
-        MaxSped: req.body.MaxSped,
-        KmRange: req.body.KmRange,
-        HorsPower: req.body.HorsPower,
-        Prix: req.body.Prix,
         Type: req.body.Type
         })
         res.status(200).json(Cars)
     }
-    
+
     const UpdateCars = async (req,res)=>{
         const Cars = await Car.findById(req.params.id)
         !Cars? res.status(400) &&  Error('Car Not found'): null;
