@@ -29,6 +29,13 @@ Content-Type: application/json
 
 
 // ADMIN
+###
+POST http://localhost:8000/api/admin/register
+
+###
+POST http://localhost:8000/api/admin/login
+
+
 
 
 // CAR 
