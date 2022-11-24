@@ -141,6 +141,25 @@
   },
   "author": "",
   "license": "ISC",
-  "keywords": [],
-  "description": ""
+  "dependencies": {
+    "abbrev": "^1.1.1",
+    "accepts": "^1.3.8",
+    "anymatch": "^3.1.3",
+    "array-flatten": "^1.1.1",
+    "balanced-match": "^1.0.2",
+    "base64-js": "^1.5.1",
+    "bcryptjs": "^2.4.3",
+    "binary-extensions": "^2.2.0",
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
