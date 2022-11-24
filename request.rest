@@ -6,6 +6,13 @@ POST http://localhost:8000/api/users/login
 
 
 // ADMIN
+###
+POST http://localhost:8000/api/admin/register
+
+###
+POST http://localhost:8000/api/admin/login
+
+
 
 
 // CAR 
