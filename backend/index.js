@@ -24,4 +24,8 @@ app.use('/api/users',require('./routes/userRouter'))
 
 app.listen(port, ()=>{ 
     console.log(`hello from ${port}`)
+
+
+
 })
+
