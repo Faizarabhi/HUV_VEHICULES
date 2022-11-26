@@ -4,8 +4,8 @@ const Reservation = require('../models/ReservationModel')
 
 const getReservation = async(req,res)=>{
     try{
-        const care = await Reservation.find();
-        res.json(care);
+        const reserve = await Reservation.find();
+        res.json(reserve);
           }catch(err){
             res.json({message: err});
           }
@@ -13,21 +13,39 @@ const getReservation = async(req,res)=>{
 
 const AddReservation = async (req,res)=>{
        
-        const Cars = await Reservation.create({
-        Name: req.body.Name,
-        Type: req.body.Type
+        const Reserve = await Reservation.create({
+            UserName: req.body.UserName,
+            Adress: req.body.Adress,
+            City: req.body.City,
+            state: req.body.State,
+            Zip: req.body.Zip,
+            Country: req.body.Country,
+            Type: req.body.Type,
+            DateDebut: req.body.DateDebut,
+            DateFin: req.body.DateFin
+
         })
-        res.status(200).json(Cars)
-    }
-    
-    const UpdateCars = async (req,res)=>{
-        const Reserve = await Reservation.findById(req.params.id)
-        !Cars? res.status(400) &&  Error('Car Not found'): null;
-        const Reserver = await Reservation.findByIdAndUpdate(req.params.id,req.body,{ new : true})
-        res.status(200).json(Reserver)
-    
+        res.status(200).json(Reserve)
     }
 
+    const DeleteReservation = async (req,res)=>{
+
+
+
+        const Reserve = await Reservation.findById(req.params.id)
+        if(!Reserve){
+            res.status(400)
+            throw new Error('car Not found')
+        }
+        
+     
+    
+        await Reservation.remove()
+        res.status(200).json({id : req.params.id})
+    
+    }
+    
+  
    
 
 
@@ -37,4 +55,4 @@ const AddReservation = async (req,res)=>{
 
 
 
-module.exports = {getCars, AddCar, UpdateCars,deleteCar }
+module.exports = {AddReservation , getReservation , DeleteReservation }

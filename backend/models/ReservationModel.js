@@ -3,30 +3,43 @@ const Schema = mongoose.Schema
 
 const Reservation = new Schema(
     {
-        Name : { 
+        UserName : { 
             type: String, 
             require: true
         },
-        MaxSped : {
-            type: Number,
+        Adress : { 
+            type: String, 
             require: true
         },
-        KmRange : {
-            type: Number,
-            require : true
-        },
-        HorsPower : {
-            type: Number,
-            require : true
-        },
-        Prix : {
-            type: Number,
-            require : true
-        },
-        Type : {
-            type: String,
+        City : { 
+            type: String, 
             require: true
-        }
+        },
+        State : { 
+            type: String, 
+            require: true
+        },
+        Zip : { 
+            type: String, 
+            require: true
+        },
+        Country : { 
+            type: String, 
+            require: true
+        },
+        Type : { 
+            type: String, 
+            require: true
+        },
+        DateDebut : { 
+            type: Date, 
+            require: true
+        },
+        DateFin : { 
+            type: Date, 
+            require: true
+        },
+        
     }
 )
-module.exports = mongoose.model('Car',Reservation)
+module.exports = mongoose.model('Reservation',Reservation)

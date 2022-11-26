@@ -33,7 +33,7 @@ const AddCar = async (req,res)=>{
         const Cars = await Car.findById(req.params.id)
         if(!Cars){
             res.status(400)
-            throw new Error('grandbus Not found')
+            throw new Error('car Not found')
         }
         
      
