@@ -35,7 +35,7 @@ const AddReservation = async (req,res)=>{
         const Reserve = await Reservation.findById(req.params.id)
         if(!Reserve){
             res.status(400)
-            throw new Error('car Not found')
+            throw new Error('Reservation Not found')
         }
         
      
