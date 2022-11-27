@@ -1,5 +1,5 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 
 const {
     registerAdmin, 
@@ -9,15 +9,15 @@ const {
 
 
 
-const {protect} =  require('../middlewar/authMiddlewar')
+const {protect, isAdmin} =  require('../middlewar/authMiddlewar')
 
-router.post('/register',registerAdmin)
-router.post('/login',loginAdmin)
-router.get('/displayMe', protect, getDataAdmin)
+router.post('/register',registerAdmin);
+router.post('/login',loginAdmin);
+router.get('/displayMe', protect, isAdmin, getDataAdmin);
 
 
 
-module.exports = router
+module.exports = router;
 
 
 

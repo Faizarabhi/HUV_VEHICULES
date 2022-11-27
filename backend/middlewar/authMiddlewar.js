@@ -38,8 +38,9 @@ const isAdmin =  (req, res, next) => {
   try{
     const {isAdmin} = req.user;
     console.log(req.user)
-    if(!isAdmin) return res.json({message: "forbidden"});
-}
+    if(!isAdmin) return res.json({message:
+      "You are not authorized to access this route"})   
+          next()}
 catch(ex) {
     res.json(ex.message)
 }
@@ -47,4 +48,4 @@ catch(ex) {
 next();
 }
 
-module.exports = { protect };
+module.exports = { protect, isAdmin };
