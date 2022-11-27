@@ -3,14 +3,17 @@ const router = express.Router()
 
 const {
     registerAdmin, 
-    loginAdmin
+    loginAdmin,
+    getDataAdmin,
 } = require('../controllers/adminController')
+
+
+
+const {protect} =  require('../middlewar/authMiddlewar')
 
 router.post('/register',registerAdmin)
 router.post('/login',loginAdmin)
-
-    // const {protect} =  require('../middleware/authMiddleware')
-
+router.get('/displayMe', protect, getDataAdmin)
 
 
 

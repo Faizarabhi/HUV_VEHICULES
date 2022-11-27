@@ -28,6 +28,13 @@ const AddReservation = async (req,res)=>{
     
     }
 
+    // confirme booking by mail
+    // const confirmeBooking = async (req,res)=>{
+
+      
+    //     }
+
+
    
 
 

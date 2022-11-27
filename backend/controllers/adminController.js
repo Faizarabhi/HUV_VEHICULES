@@ -1,12 +1,11 @@
-// const jwt = require("jsonwebtoken");
-const bcrypt = require('bcrypt');
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
 const asyncHandler = require("express-async-handler");
 const Admin = require("../models/adminModel");
 const { json } = require("express");
 
-
 const registerAdmin = asyncHandler(async (req, res) => {
-  const {email, password } = req.body;
+  const { email, password } = req.body;
 
   if (!email || !password) {
     res.status(400);
@@ -33,8 +32,7 @@ const registerAdmin = asyncHandler(async (req, res) => {
     res.status(200).json({
       _id: admin.id,
       email: admin.email,
-    //   token: generateToken(Admin._id),
-      status: true,
+      token: generateToken(Admin._id),
     });
   } else {
     res.status(400).json({
@@ -55,8 +53,8 @@ const loginAdmin = asyncHandler(async (req, res) => {
       .json({
         _id: admin.id,
         email: admin.email,
-        // token: generateToken(admin._id),
-        // status: true,
+        token: generateToken(admin._id),
+        status: true,
       })
       .status(200);
   } else {
@@ -66,24 +64,25 @@ const loginAdmin = asyncHandler(async (req, res) => {
   }
 });
 
+const getDataAdmin = asyncHandler(async (req, res) => {
+  const { _id, email } = await Admin.findById(req.admin.id);
+  res.status(200).json({
+    id: _id,
+    email,
+  });
+});
 
-// const getDataAdmin = asyncHandler(async (req, res) => {
-//   res.json({ message: "Admin Data" });
-// });
 // Generate JWT
-// const generateToken = (id) => {
-//   return jwt.sign({ id }, process.env.JWT_SECRET, {
-//     expiresIn: "2h",
-//   });
-// };
-
+const generateToken = (id) => {
+  return jwt.sign({ id }, process.env.JWT_SECRET, {
+    expiresIn: "30d",
+  });
+};
 
 module.exports = {
   registerAdmin,
   loginAdmin,
-
+  getDataAdmin,
 };
-
-
 
 // next() pour passer d'une fonction à une autre
