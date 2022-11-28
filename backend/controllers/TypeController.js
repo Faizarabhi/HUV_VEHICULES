@@ -14,7 +14,7 @@ const getType = async(req,res)=>{
 const AddType = async (req,res)=>{
        
         const Types = await Type.create({
-           Type_Name: req.body.UserName,
+           Type_Name: req.body.Type_Name,
            Date_Creation: req.body.Date_Creation,
            Prix: req.body.Prix,
            Detalles: req.body.Detalles
