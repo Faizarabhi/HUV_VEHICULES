@@ -6,7 +6,8 @@ const Type = new Schema(
         
         Type_Name : { 
             type: String, 
-            require: true
+            require: true,
+            unique: true
         },
         Date_Creation : {
             type : Date,
@@ -17,7 +18,7 @@ const Type = new Schema(
             require: true
         },
         Detalles: [{
-            type: Array,
+            type: String,
             required: true
         }]
         
