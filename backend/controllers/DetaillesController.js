@@ -42,7 +42,7 @@ const AddDetalles = async (req,res)=>{
 
 
         const Detalle = await Detalles.findById(req.params.id)
-        if(!Reserve){
+        if(!Detalle){
             res.status(400)
             throw new Error('Detalles Not found')
         }

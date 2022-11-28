@@ -5,7 +5,7 @@ const {getReservation,AddReservation, DeleteReservation, SendConfirmation} = req
 
 router.route('/').get(getReservation).post(AddReservation)
 router.route('/:id').delete(DeleteReservation)
-router.route('/Confirmer').post(SendConfirmation)
+router.route('/Confirmer/:Email').post(SendConfirmation)
 
 
 module.exports = router

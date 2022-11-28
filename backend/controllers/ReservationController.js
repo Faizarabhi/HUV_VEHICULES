@@ -52,18 +52,18 @@ const AddReservation = async (req,res)=>{
 
 
         const transporter = nodemailer.createTransport({
-        service: 'Email',
+        service: 'outlook',
         auth: {
-            user: 'namx.huv@gmail.com',
-            pass: 'Ayoub123'
+            user: 'Namx-Huv@outlook.com',
+            pass: 'Ayoub1998@@'
         }
     });
 
         const email = {
-            from: 'namx.huv@gmail.com',
-            to: 'Abenouahi5@gmail.com',
+            from: 'Namx-Huv@outlook.com',
+            to: req.params.Email,
             subject: 'Confirmation reserver sur Car Nmax',
-            text: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+            text: ' la réservation a été bien reçu'
         }
         transporter.sendMail(email, function(err , info){
             if(err){
