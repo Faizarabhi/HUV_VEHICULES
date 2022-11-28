@@ -12,10 +12,14 @@ const Type = new Schema(
             type : Date,
             require: true
         },
-        Detalles: {
-            type: Object,
+        Prix : {
+            type : Number,
+            require: true
+        },
+        Detalles: [{
+            type: Array,
             required: true
-        }
+        }]
         
     }
 )

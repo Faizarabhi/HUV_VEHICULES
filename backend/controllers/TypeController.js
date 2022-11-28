@@ -14,8 +14,9 @@ const getType = async(req,res)=>{
 const AddType = async (req,res)=>{
        
         const Types = await Type.create({
-           Type_Name: req.body.UserName,
+           Type_Name: req.body.Type_Name,
            Date_Creation: req.body.Date_Creation,
+           Prix: req.body.Prix,
            Detalles: req.body.Detalles
 
 
@@ -23,22 +24,9 @@ const AddType = async (req,res)=>{
         res.status(200).json(Types)
     }
 
-    const DeleteTypes = async (req,res)=>{
 
-
-
-        const Types = await Type.findById(req.params.id)
-        if(!Types){
-            res.status(400)
-            throw new Error('Reservation Not found')
-        }
-        
-     
+   
     
-        await Type.remove()
-        res.status(200).json({id : req.params.id})
-    
-    }
     
   
    
@@ -50,4 +38,4 @@ const AddType = async (req,res)=>{
 
 
 
-module.exports = {AddType , getType , DeleteTypes }
+module.exports = {AddType , getType  }
