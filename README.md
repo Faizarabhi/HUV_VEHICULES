@@ -15,7 +15,7 @@
   </p>
 </div>
 
-https://lucid.app/lucidchart/c8fbae29-dc3c-4029-bb15-ef78eec1d1b9/edit?invitationId=inv_edf1839d-9b3d-41a3-a59b-e7fabd9114c3&page=0_0#
+
 
 ### HUV_VEHICULES
 
