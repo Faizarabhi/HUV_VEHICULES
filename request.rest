@@ -18,7 +18,7 @@ Content-Type: application/json
 
 {
     "fullname" : "user",
-    "email" : "user8@gmail.com",
+    "email" : "user11@gmail.com",
     "password" : "123",
     "address" : "adress1",
     "city" : "city1",
@@ -31,10 +31,21 @@ Content-Type: application/json
 // ADMIN
 ###
 POST http://localhost:8000/api/admin/register
+Content-Type: application/json
+
+{
+    "email" : "admin@gmail.com",
+    "password" : "123",
+}
 
 ###
 POST http://localhost:8000/api/admin/login
+Content-Type: application/json
 
+{
+    "email" : "admin@gmail.com",
+    "password" : "123",
+}
 
 
 

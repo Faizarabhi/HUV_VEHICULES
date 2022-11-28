@@ -7,7 +7,10 @@ const port = process.env.PORT || 8000
 const {errorHandler} = require('./middlewar/errorMiddlewar')
 const carRouter= require('./routes/carRouter');
 const DetallesRoute = require('./routes/DetallesRouter');
-
+const ReserationRoute = require('./routes/ReservationRouter');
+const userRoute = require('./routes/userRouter')
+const TypeRoute = require('./routes/TypeRouter')
+const adminRoute = require('./routes/adminRouter')
 
 db();
 const app = express()
@@ -18,10 +21,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(errorHandler)
 
 
+
+app.use('/api/Reservation',ReserationRoute)
 app.use('/api/detalles',DetallesRoute)
 app.use('/api/cars',carRouter)
-app.use('/api/users',require('./routes/userRouter'))
-app.use('/api/admins',require('./routes/adminRouter'))
+app.use('/api/users',userRoute)
+app.use('/api/admins',adminRoute)
+app.use('/api/Type',TypeRoute)
+
 
 
 app.listen(port, ()=>{ 

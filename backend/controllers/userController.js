@@ -8,12 +8,12 @@ const registerUser = asyncHandler(async(req,res)=>{
     const {fullname, email, password, address, city, state, zip, country} = req.body
     if(!fullname || !email || !password || !address || !address || !city || !state || !zip || !country){
     res.status(400) 
-    throw new Error('Please add all fields')
+    // throw new Error('Please add all fields')
     }
     
     const userExists = await User.findOne({email});
     if(userExists){
-        throw new Error('User already exists')
+        // throw new Error('User already exists')
     } 
     //  salt is a random string that makes the hash unpredictable
     const salt = await bcrypt.genSalt(10);
@@ -35,7 +35,7 @@ const registerUser = asyncHandler(async(req,res)=>{
         email : email})
        } else{
     res.status(400) 
-    throw new Error('Invalid user data');
+    // throw new Error('Invalid user data');
     }
     
 })
@@ -54,7 +54,7 @@ const loginUser = asyncHandler(async (req, res) => {
       })
     } else {
       res.status(400)
-      throw new Error('Invalid credentials')
+      // throw new Error('Invalid credentials')
     }
   })
 

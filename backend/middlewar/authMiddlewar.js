@@ -44,12 +44,12 @@ const isAdmin = asyncHandler(async (req, res, next) => {
   if (req.admin && req.admin.isAdmin) {
     next();
   } else {
-    res.status(401).send("Not authorized as an admin");
+    res.status(401);
+    throw new Error("Not authorized as an admin");
   }
 });
 
 module.exports = { protect, isAdmin, getDataAdmin };
-
 
 
 
