@@ -15,7 +15,7 @@ const getCars = async(req,res)=>{
 const AddCar = async (req,res)=>{
        
         const Cars = await Car.create({
-        Name: req.body.Name,
+        Name: req.body.Name,  
         Type: req.body.Type
         })
         res.status(200).json(Cars)
@@ -33,7 +33,7 @@ const AddCar = async (req,res)=>{
         const Cars = await Car.findById(req.params.id)
         if(!Cars){
             res.status(400)
-            throw new Error('grandbus Not found')
+            throw new Error('car Not found')
         }
         
      

@@ -35,6 +35,27 @@ const AddDetalles = async (req,res)=>{
        
     }
 
+
+
+    const DeleteDetalles = async (req,res)=>{
+
+
+
+        const Detalle = await Detalles.findById(req.params.id)
+        if(!Detalle){
+            res.status(400)
+            throw new Error('Detalles Not found')
+        }
+        
+     
+    
+        await Detalles.remove()
+        res.status(200).json({id : req.params.id})
+    
+    }
+
+    
+
     
 
  
@@ -45,4 +66,4 @@ const AddDetalles = async (req,res)=>{
 
 
 
-module.exports = {AddDetalles, getDetalles}
+module.exports = {AddDetalles, getDetalles, DeleteDetalles}
