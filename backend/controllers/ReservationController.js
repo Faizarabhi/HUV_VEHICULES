@@ -1,4 +1,5 @@
 const Reservation = require('../models/ReservationModel')
+const nodemailer = require('nodemailer');
 
 
 
@@ -44,6 +45,38 @@ const AddReservation = async (req,res)=>{
         res.status(200).json({id : req.params.id})
     
     }
+
+    
+
+    const SendConfirmation = async (req,res)=>{
+
+
+        const transporter = nodemailer.createTransport({
+        service: 'Email',
+        auth: {
+            user: 'namx.huv@gmail.com',
+            pass: 'Ayoub123'
+        }
+    });
+
+        const email = {
+            from: 'namx.huv@gmail.com',
+            to: 'Abenouahi5@gmail.com',
+            subject: 'Confirmation reserver sur Car Nmax',
+            text: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+        }
+        transporter.sendMail(email, function(err , info){
+            if(err){
+                console.log(err)
+            }else{
+                console.log('Email sent: ' +info.response)
+            }
+        })
+
+        
+    
+    }
+    
     
   
    
@@ -55,4 +88,4 @@ const AddReservation = async (req,res)=>{
 
 
 
-module.exports = {AddReservation , getReservation , DeleteReservation }
+module.exports = {AddReservation , getReservation , DeleteReservation ,SendConfirmation }

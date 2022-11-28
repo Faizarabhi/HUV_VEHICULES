@@ -15,7 +15,7 @@ const getCars = async(req,res)=>{
 const AddCar = async (req,res)=>{
        
         const Cars = await Car.create({
-        Name: req.body.Name,
+        Name: req.body.Name,  
         Type: req.body.Type
         })
         res.status(200).json(Cars)
