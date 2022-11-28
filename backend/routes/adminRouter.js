@@ -9,11 +9,11 @@ const {
 
 
 
-const {protect, isAdmin} =  require('../middlewar/authMiddlewar')
+const {protect,} =  require('../middlewar/authMiddlewar')
 
 router.post('/register',registerAdmin);
 router.post('/login',loginAdmin);
-router.get('/displayMe', protect, isAdmin, getDataAdmin);
+router.get('/displayMe', protect, getDataAdmin);
 
 
 

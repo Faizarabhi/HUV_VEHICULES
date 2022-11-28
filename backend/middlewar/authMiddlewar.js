@@ -4,7 +4,6 @@ const Admin = require("../models/adminModel");
 
 const protect = asyncHandler(async (req, res, next) => {
   let token;
-
   if (
     req.headers.authorization &&
     req.headers.authorization.startsWith("Bearer")
@@ -23,29 +22,41 @@ const protect = asyncHandler(async (req, res, next) => {
     } catch (error) {
       console.error(error);
       res.status(401);
-       new Error("Not authorized, token failed");
+      new Error("Not authorized, token failed");
     }
   }
-
   if (!token) {
-    res.status(401);
-     new Error("Not authorized, no token");
+    res.status(401).send("Not authorized, no token");
   }
 });
 
+// check if the user is an admin
+const getDataAdmin = asyncHandler(async (req, res) => {
+  const { _id, email } = await Admin.findById(req.admin.id);
+  res.status(200).json({
+    id: _id,
+    email,
+  });
+});
 
-const isAdmin =  (req, res, next) => {
-  try{
-    const {isAdmin} = req.user;
-    console.log(req.user)
-    if(!isAdmin) return res.json({message:
-      "You are not authorized to access this route"})   
-          next()}
-catch(ex) {
-    res.json(ex.message)
-}
+// check if the user is an admin
+const isAdmin = asyncHandler(async (req, res, next) => {
+  if (req.admin && req.admin.isAdmin) {
+    next();
+  } else {
+    res.status(401).send("Not authorized as an admin");
+  }
+});
 
-next();
-}
+module.exports = { protect, isAdmin, getDataAdmin };
 
-module.exports = { protect, isAdmin };
+
+
+
+
+
+
+
+
+
+
