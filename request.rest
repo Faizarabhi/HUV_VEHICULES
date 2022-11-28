@@ -1,33 +1,55 @@
 
 
 // USER
-###
+// login
 POST http://localhost:8000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "user8@gmail.com",
+    "password": "123"
+}
+
+
+###
+// register
+POST http://localhost:8000/api/users/register
+Content-Type: application/json
+
+{
+    "fullname" : "user",
+    "email" : "user11@gmail.com",
+    "password" : "123",
+    "address" : "adress1",
+    "city" : "city1",
+    "state" : "state1",
+    "zip" : 1 ,
+    "country" : "country1"
+}
 
 
 // ADMIN
+###
+POST http://localhost:8000/api/admin/register
+Content-Type: application/json
+
+{
+    "email" : "admin@gmail.com",
+    "password" : "123",
+}
+
+###
+POST http://localhost:8000/api/admin/login
+Content-Type: application/json
+
+{
+    "email" : "admin@gmail.com",
+    "password" : "123",
+}
+
 
 
 // CAR 
-###
-//Aficher Tous Les car
-GET localhost:8000/api/cars
-###
-//Ajouter Car
-POST localhost:8000/api/cars
-
-###
-//Moudifier Car
-PUT   localhost:8000/api/cars/637de215ab2a600ddfd5d2a6
-
-###
-//Deleteun car 
-DELETE  localhost:8000/api/cars/637de215ab2a600ddfd5d2a6
-
-
-
-
-
 
 
 // RESERVATION
