@@ -93,146 +93,146 @@ Ayoub Benouahi
 <h2 id="API">Les API<h2>
 
 
+<br>
 
+// USER<br>
+// login<br>
+POST http://localhost:8000/api/users/login<br>
+Content-Type: application/json<br>
 
-// USER
-// login
-POST http://localhost:8000/api/users/login
-Content-Type: application/json
-
-{
-    "email": "user8@gmail.com",
-    "password": "123"
-}
-
-
-###
-// register
-POST http://localhost:8000/api/users/register
-Content-Type: application/json
-
-{
-    "fullname" : "user",
-    "email" : "user11@gmail.com",
-    "password" : "123",
-    "address" : "adress1",
-    "city" : "city1",
-    "state" : "state1",
-    "zip" : 1 ,
-    "country" : "country1"
-}
-
-
-// ADMIN
-###
-POST http://localhost:8000/api/admin/register
-Content-Type: application/json
-
-{
-    "email" : "admin@gmail.com",
-    "password" : "123",
-}
+{<br>
+    "email": "user8@gmail.com",<br>
+    "password": "123"<br>
+}<br>
+<br>
 
 ###
-POST http://localhost:8000/api/admin/login
-Content-Type: application/json
+// register<br>
+POST http://localhost:8000/api/users/register<br>
+Content-Type: application/json<br>
 
-{
-    "email" : "admin@gmail.com",
-    "password" : "123",
-}
+{<br>
+    "fullname" : "user",<br>
+    "email" : "user11@gmail.com",<br>
+    "password" : "123",<br>
+    "address" : "adress1",<br>
+    "city" : "city1",<br>
+    "state" : "state1",<br>
+    "zip" : 1 ,<br>
+    "country" : "country1"<br>
+}<br>
+<br>
 
+// ADMIN<br>
+###<br>
+POST http://localhost:8000/api/admin/register<br>
+Content-Type: application/json<br>
 
+{<br>
+    "email" : "admin@gmail.com",<br>
+    "password" : "123",<br>
+}<br>
+<br>
+###<br>
+POST http://localhost:8000/api/admin/login<br>
+Content-Type: application/json<br>
 
-// CAR 
-###
-GET localhost:8000/api/cars
+{<br>
+    "email" : "admin@gmail.com",<br>
+    "password" : "123",<br>
+}<br>
 
+<br>
 
-// Ajouter les car
-###
-POST localhost:8000/api/cars
-Content-Type: application/json
-{
-     "Name": "Nmax",
-   "Type": "6384d6cdd6a1438f7ac78411"
+// CAR <br>
+###<br>
+GET localhost:8000/api/cars<br>
+<br><br>
+
+// Ajouter les car<br>
+###<br>
+POST localhost:8000/api/cars<br>
+Content-Type: application/json<br>
+{<br>
+     "Name": "Nmax",<br>
+   "Type": "6384d6cdd6a1438f7ac78411"<br>
    
-}
+}<br>
 
-// RESERVATION
-###
-//Confirmtion reservation sur email
-POST localhost:8000/api/Reservation/Confirmer/:Gmail
+// RESERVATION<br>
+###<br>
+//Confirmtion reservation sur email<br>
+POST localhost:8000/api/Reservation/Confirmer/:Gmail<br>
 
+<br>
+//Ajouter Reservation <br>
+###<br>
 
-//Ajouter Reservation 
-###
+POST localhost:8000/api/Reservation<br>
 
-POST localhost:8000/api/Reservation
+Content-Type: application/json<br>
+{<br>
+        "NomUtilisateur": "Basidi",<br>
+        "NumeroCar": "1234-B-1",<br>
+        "villeDepare": "Safi",<br>
+        "DateDepart": "2022-11-10",<br>
+        "NumeroPlace": "4",<br>
+        "hoursDepart": "12:12",<br>
+        "Prix": "100",<br>
+        "villeCollections": "Rabat"<br>
 
-Content-Type: application/json
-{
-        "NomUtilisateur": "Basidi",
-        "NumeroCar": "1234-B-1",
-        "villeDepare": "Safi",
-        "DateDepart": "2022-11-10",
-        "NumeroPlace": "4",
-        "hoursDepart": "12:12",
-        "Prix": "100",
-        "villeCollections": "Rabat"
+}<br>
+<br>
+// Aficher Reservation<br>
+###<br>
+GET localhost:8000/api/Reservation<br>
+<br>
+// SUprimer Reservation<br>
+<br>
+DELETE localhost:8000/api/Reservation/:_id <br>
+<br>
 
-}
+// Moudifier Reservation    <br>
+###<br>
+PUT localhost:8000/api/Reservation/:_id<br>
 
-// Aficher Reservation
-
-GET localhost:8000/api/Reservation
-
-// SUprimer Reservation
-
-DELETE localhost:8000/api/Reservation/:_id 
-
-
-// Moudifier Reservation    
-###
-PUT localhost:8000/api/Reservation/:_id
-
-
+<br>
 // TYPES
-
-###
-//Aficher Les Types De Car
-GET localhost:8000/api/Type
-
-// Ajouter les Types~
-###
-POST localhost:8000/api/Type
-Content-Type: application/json
-{
-     "Type_Name": "Huv1",
-   "Date_Creation": "2022-06-06",
-   "Prix": "10000",
-   "Detalles":["6384af9ff34a59c11555dff7","6384b034f34a59c11555dffa","6384b051f34a59c11555dffd"]
+<br>
+###<br>
+//Aficher Les Types De Car<br>
+GET localhost:8000/api/Type<br>
+<br>
+// Ajouter les Types~<br>
+###<br>
+POST localhost:8000/api/Type<br>
+Content-Type: application/json<br>
+{<br>
+     "Type_Name": "Huv1",<br>
+   "Date_Creation": "2022-06-06",<br>
+   "Prix": "10000",<br>
+   "Detalles":["6384af9ff34a59c11555dff7","6384b034f34a59c11555dffa","6384b051f34a59c11555dffd"]<br>
    
-}
+}<br>
+<br>
 
 
+//DETALLES<br>
 
-//DETALLES
+// Aficher les Detalles<br>
+###<br>
+GET localhost:8000/api/detalles<br>
 
-// Aficher les Detalles
-###
-GET localhost:8000/api/detalles
+<br
+// Ajouter les Detalles<br>
+###<br>
 
+POST localhost:8000/api/detalles<br>
 
-// Ajouter les Detalles
-###
-
-POST localhost:8000/api/detalles
-
-Content-Type: application/json
-{
-     "Keys": "2",
-   "Nom_Value": "Min",
+Content-Type: application/json<br>
+{<br>
+     "Keys": "2",<br>
+   "Nom_Value": "Min",<br>
    "Value": "100"
-   
-}
+   <br>
+}<br>
