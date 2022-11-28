@@ -42,7 +42,7 @@ la demande du CEO & Founder at NamX c'est de partage l'expérience immersive de 
         <a href="#built">built</a>
       </li>
       <li>
-        <a href="#API">Les API</a></li></ol>
+        <a href="#API">Les API</a>
       </li>
     </ol>
  </details>
