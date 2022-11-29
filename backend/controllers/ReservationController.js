@@ -16,6 +16,12 @@ const getReservation = async(req,res)=>{
 
 const AddReservation = async (req,res)=>{
        
+    var today = new Date();
+    var Day = today.getDate();
+    var month = today.getMonth()+1;
+    var yers = today.getFullYear();
+
+    today = yers+'-'+month+'-'+Day;
         const Reserve = await Reservation.create({
             UserName: req.body.UserName,
             Adress: req.body.Adress,
@@ -24,8 +30,8 @@ const AddReservation = async (req,res)=>{
             Zip: req.body.Zip,
             Country: req.body.Country,
             Type: req.body.Type,
-            DateDebut: req.body.DateDebut,
-            DateFin: req.body.DateFin
+            Date: today,
+           
 
         })
         res.status(200).json(Reserve)
