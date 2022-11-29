@@ -59,7 +59,7 @@ GET localhost:8000/api/cars
 POST localhost:8000/api/cars
 Content-Type: application/json
 {
-     "Name": "Nmax",
+    "Name": "Nmax",
    "Type": "6384d6cdd6a1438f7ac78411"
    
 }
@@ -67,11 +67,11 @@ Content-Type: application/json
 // RESERVATION
 ###
 //Confirmtion reservation sur email
-POST localhost:8000/api/Reservation/Confirmer/:Gmail
+POST localhost:8000/api/Reservation/Confirmer/:Email
 
 
 //Ajouter Reservation 
-###
+### 
 
 POST localhost:8000/api/Reservation
 
@@ -113,7 +113,7 @@ GET localhost:8000/api/Type
 POST localhost:8000/api/Type
 Content-Type: application/json
 {
-     "Type_Name": "Huv1",
+   "Type_Name": "Huv",
    "Date_Creation": "2022-06-06",
    "Prix": "10000",
    "Detalles":["6384af9ff34a59c11555dff7","6384b034f34a59c11555dffa","6384b051f34a59c11555dffd"]
@@ -122,7 +122,7 @@ Content-Type: application/json
 
 
 
-//DETALLES
+//DETAIlS
 
 // Aficher les Detalles
 ###
@@ -136,7 +136,7 @@ POST localhost:8000/api/detalles
 
 Content-Type: application/json
 {
-     "Keys": "2",
+   "Keys": "2",
    "Nom_Value": "Min",
    "Value": "100"
    
