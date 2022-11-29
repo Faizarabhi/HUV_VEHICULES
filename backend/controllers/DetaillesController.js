@@ -13,16 +13,15 @@ const getDetalles = async(req,res)=>{
 }
 
 const AddDetalles = async (req,res)=>{
-    const Detals = await Detalles.find();
-    var J = 0;
-    Detals.forEach(element => {
-        if(element.Keys == req.body.Keys ){
-            console.log("Keys deja par list")
-            J=J+1;
-        }
-    });
+    const Detals = await Detalles.find({Keys : {$eq :req.body.Keys}});
+    console.log(req.body.Keys,'rrrrr',Detals.length)
+   
+if(Detals.length > 0){
 
-    if(J==0){
+       
+  console.log('deja Keys kayn')
+       
+    }else{
         const Detalle = await Detalles.create({
            
             Keys: req.body.Keys,
@@ -30,12 +29,10 @@ const AddDetalles = async (req,res)=>{
             Value: req.body.Value
         })
         res.status(200).json(Detalle)
-    }
-  
-       
+        
     }
 
-
+}
 
     const DeleteDetalles = async (req,res)=>{
 

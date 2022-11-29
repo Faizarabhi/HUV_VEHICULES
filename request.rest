@@ -3,32 +3,12 @@
 // USER
 // login
 POST http://localhost:8000/api/users/login
-Content-Type: application/json
-
-{
-    "email": "user8@gmail.com",
-    "password": "123"
-}
-
-
-###
-// register
-POST http://localhost:8000/api/users/register
-Content-Type: application/json
-
-{
-    "fullname" : "user",
-    "email" : "user11@gmail.com",
-    "password" : "123",
-    "address" : "adress1",
-    "city" : "city1",
-    "state" : "state1",
-    "zip" : 1 ,
-    "country" : "country1"
-}
 
 
 // ADMIN
+
+
+// CAR 
 ###
 POST http://localhost:8000/api/admin/register
 Content-Type: application/json
@@ -51,29 +31,37 @@ Content-Type: application/json
 
 // CAR 
 ###
-GET localhost:8000/api/cars
+GET http://localhost:8000/api/cars
 
 
 // Ajouter les car
 ###
-POST localhost:8000/api/cars
+POST http://localhost:8000/api/cars
 Content-Type: application/json
+
 {
     "Name": "Nmax",
+
    "Type": "6384d6cdd6a1438f7ac78411"
+
+  
+
    
 }
 
 // RESERVATION
 ###
 //Confirmtion reservation sur email
+
 POST localhost:8000/api/Reservation/Confirmer/:Email
+
+
 
 
 //Ajouter Reservation 
 ### 
 
-POST localhost:8000/api/Reservation
+POST http://localhost:8000/api/Reservation
 
 Content-Type: application/json
 {
@@ -90,33 +78,39 @@ Content-Type: application/json
 
 // Aficher Reservation
 
-GET localhost:8000/api/Reservation
+GET http://localhost:8000/api/Reservation
 
 // SUprimer Reservation
 
-DELETE localhost:8000/api/Reservation/:_id 
+DELETE http://localhost:8000/api/Reservation/:_id 
 
 
 // Moudifier Reservation    
 ###
-PUT localhost:8000/api/Reservation/:_id
+PUT http://localhost:8000/api/Reservation/:_id
 
 
 // TYPES
 
 ###
 //Aficher Les Types De Car
-GET localhost:8000/api/Type
+GET http://localhost:8000/api/Type
 
 // Ajouter les Types~
 ###
-POST localhost:8000/api/Type
+POST http://localhost:8000/api/Type
 Content-Type: application/json
+
 {
+
    "Type_Name": "Huv",
    "Date_Creation": "2022-06-06",
    "Prix": "10000",
    "Detalles":["6384af9ff34a59c11555dff7","6384b034f34a59c11555dffa","6384b051f34a59c11555dffd"]
+    "Type_Name": "bot5",
+    "Date_Creation": "2022-06-06",
+    "Prix": "10000",
+    "Detalles":["63860fb91be8e42bb37760f6","63860fcb1be8e42bb37760fc"]
    
 }
 
@@ -126,7 +120,7 @@ Content-Type: application/json
 
 // Aficher les Detalles
 ###
-GET localhost:8000/api/detalles
+GET http://localhost:8000/api/detalles
 
 
 // Ajouter les Detalles
@@ -134,10 +128,16 @@ GET localhost:8000/api/detalles
 
 POST localhost:8000/api/detalles
 
+POST http://localhost:8000/api/detalles
 Content-Type: application/json
+
 {
-   "Keys": "2",
-   "Nom_Value": "Min",
-   "Value": "100"
-   
+
+  
+
+
+    "Keys": "16",
+    "Nom_Value": "max",
+    "Value": "150"
+
 }
