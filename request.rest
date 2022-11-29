@@ -70,27 +70,27 @@ Content-Type: application/json
 
 // Aficher Reservation
 
-GET localhost:8000/api/Reservation
+GET http://localhost:8000/api/Reservation
 
 // SUprimer Reservation
 
-DELETE localhost:8000/api/Reservation/:_id 
+DELETE http://localhost:8000/api/Reservation/:_id 
 
 
 // Moudifier Reservation    
 ###
-PUT localhost:8000/api/Reservation/:_id
+PUT http://localhost:8000/api/Reservation/:_id
 
 
 // TYPES
 
 ###
 //Aficher Les Types De Car
-GET localhost:8000/api/Type
+GET http://localhost:8000/api/Type
 
 // Ajouter les Types~
 ###
-POST localhost:8000/api/Type
+POST http://localhost:8000/api/Type
 Content-Type: application/json
 {
      "Type_Name": "Huv1",
