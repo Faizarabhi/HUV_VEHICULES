@@ -22,7 +22,6 @@ const getType = async(req,res)=>{
 }
 
 const AddType = async (req,res)=>{
-       
 
         const Types = await Type.create({
            Type_Name: req.body.Type_Name,
@@ -31,6 +30,7 @@ const AddType = async (req,res)=>{
            Detalles: req.body.Detalles
         })
         res.status(200).json(Types)
+
     }
 
 
@@ -47,4 +47,4 @@ const AddType = async (req,res)=>{
 
 
 
-module.exports = {AddType , getType  }
+module.exports = {AddType , getType }
