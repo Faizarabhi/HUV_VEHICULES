@@ -115,7 +115,7 @@ npm install express
 ```
 
 
-[Back to top](#table-of-contents)
+[Back to table of Contents](#table-of-contents)
 
 ## Configuration
 
@@ -151,10 +151,32 @@ backend/
 └── index.ts                    # App entry point (initializes database connection and express server)
 ```
 
-[Back to top](#table-of-contents)
+[Back to table of Contents](#table-of-contents)
 
 
-[Back to top](#table-of-contents)
+# Features
+
+## API Endpoints
+
+List of available routes:
+
+**Auth routes** (public):\
+`POST /api/register` - register\
+`POST /api/login` - login\
+
+**User routes** (private):\
+`GET /api/users` - get all users\
+`GET /api/users/:id` - get user by id\
+`PATCH /api/users/:id` - update user\
+`DELETE /api/users/:id` - delete user
+
+**Admin routes**:\
+`GET /api/admins` - get all admins\
+`GET /api/admins/:id` - get admin by id\
+`PATCH /api/admins/:id` - update admin\
+`DELETE /api/admins/:id` - delete admin
+
+[Back to table of Contents](#table-of-contents)
 
 <h2 id="credits"> :scroll: Credits</h2>
 
