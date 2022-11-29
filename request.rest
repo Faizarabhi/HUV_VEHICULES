@@ -31,12 +31,12 @@ Content-Type: application/json
 
 // CAR 
 ###
-GET localhost:8000/api/cars
+GET http://localhost:8000/api/cars
 
 
 // Ajouter les car
 ###
-POST localhost:8000/api/cars
+POST http://localhost:8000/api/cars
 Content-Type: application/json
 {
      "Name": "Nmax",
@@ -47,13 +47,13 @@ Content-Type: application/json
 // RESERVATION
 ###
 //Confirmtion reservation sur email
-POST localhost:8000/api/Reservation/Confirmer/:Gmail
+POST http://localhost:8000/api/Reservation/Confirmer/:Gmail
 
 
 //Ajouter Reservation 
 ###
 
-POST localhost:8000/api/Reservation
+POST http://localhost:8000/api/Reservation
 
 Content-Type: application/json
 {
@@ -112,12 +112,15 @@ GET http://localhost:8000/api/detalles
 // Ajouter les Detalles
 ###
 
+POST localhost:8000/api/detalles
 
 POST http://localhost:8000/api/detalles
 Content-Type: application/json
 
 {
+
     "Keys": "16",
     "Nom_Value": "max",
     "Value": "150"
+
 }
