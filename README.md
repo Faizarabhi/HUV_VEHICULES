@@ -43,7 +43,7 @@ la demande du CEO & Founder at NamX c'est de partage l'expérience immersive de 
         <a href="#built">built</a>
       </li>
    
-    </ol>
+   </ol>
  </details>
  
 ![HUV_VEHICULES Social Banner](https://www.namx-hydrogen.com/img/home/suv-hydrogene-1920w.webp)
@@ -51,7 +51,7 @@ la demande du CEO & Founder at NamX c'est de partage l'expérience immersive de 
   
 # Introduction
 
-Create a maintainable and scalable Node.js REST API with  Express and Mongoose.
+Créez une API REST Node.js maintenable et évolutive avec Express et Mongoose.
 
 The project structure is based on MVC and follows it's basic principles but is a little bit different in which instead of having the entities logic spread out into specific folders (models folder containing all models, controllers folder containing all controllers etc...).
 
@@ -97,6 +97,64 @@ npm init
 
 
 
+# Setup
+
+## Usage
+
+*By default, it uses `npm` to install dependencies.
+
+- If you prefer another package manager you can pass it as an argument `yarn`
+
+Then open the project folder and install the required dependencies:
+
+```bash
+npm init
+```
+```bash
+npm install express
+```
+
+
+[Back to top](#table-of-contents)
+
+## Configuration
+
+Setup your environment variables. In your root directory, you will find a `.env`:
+
+```
+ .env
+```
+
+Then:
+
+```bash
+npm  start
+```
+
+The database should be connected and your server should be running. You can start testing and querying the API.
+
+```bash
+npm run start
+```
+
+[Back to top](#table-of-contents)
+
+# Directory Structure
+
+```
+backend/
+├──controllers/                 # Contains mostly global and reusable logic (such as auth and crud)
+├── db/                         # Database, routes and server configurations
+├── middlewares/                # Express middlewares
+├── routes                      # Contains entity templates (default and user type)
+├── models/                     # Custom/global type definitions
+└── index.ts                    # App entry point (initializes database connection and express server)
+```
+
+[Back to top](#table-of-contents)
+
+
+[Back to top](#table-of-contents)
 
 <h2 id="credits"> :scroll: Credits</h2>
 
