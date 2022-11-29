@@ -28,7 +28,7 @@ la demande du CEO & Founder at NamX c'est de partage l'expérience immersive de 
 - [Certifications](#certifications)
 - [Commandeline](#commandeline)
 - [Built With](#built)
-- [Les API](#API)
+
  <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -42,9 +42,7 @@ la demande du CEO & Founder at NamX c'est de partage l'expérience immersive de 
       <li>
         <a href="#built">built</a>
       </li>
-      <li>
-        <a href="#API">API</a>
-      </li>
+   
     </ol>
  </details>
  
@@ -90,149 +88,3 @@ Ayoub Benouahi
 
 
 
-<h2 id="API">Les API<h2>
-
-
-<br>
-
-// USER<br>
-// login<br>
-POST http://localhost:8000/api/users/login<br>
-Content-Type: application/json<br>
-
-{<br>
-    "email": "user8@gmail.com",<br>
-    "password": "123"<br>
-}<br>
-
-
-###
-// register<br>
-POST http://localhost:8000/api/users/register<br>
-Content-Type: application/json<br>
-
-{<br>
-    "fullname" : "user",<br>
-    "email" : "user11@gmail.com",<br>
-    "password" : "123",<br>
-    "address" : "adress1",<br>
-    "city" : "city1",<br>
-    "state" : "state1",<br>
-    "zip" : 1 ,<br>
-    "country" : "country1"<br>
-}<br>
-<br>
-
-// ADMIN<br>
-###<br>
-POST http://localhost:8000/api/admin/register<br>
-Content-Type: application/json<br>
-
-{<br>
-    "email" : "admin@gmail.com",<br>
-    "password" : "123",<br>
-}<br>
-<br>
-###<br>
-POST http://localhost:8000/api/admin/login<br>
-Content-Type: application/json<br>
-
-{<br>
-    "email" : "admin@gmail.com",<br>
-    "password" : "123",<br>
-}<br>
-
-<br>
-
-// CAR <br>
-###<br>
-GET localhost:8000/api/cars<br>
-<br><br>
-
-// Ajouter les car<br>
-###<br>
-POST localhost:8000/api/cars<br>
-Content-Type: application/json<br>
-{<br>
-     "Name": "Nmax",<br>
-   "Type": "6384d6cdd6a1438f7ac78411"<br>
-   
-}<br>
-
-// RESERVATION<br>
-###<br>
-//Confirmtion reservation sur email<br>
-POST localhost:8000/api/Reservation/Confirmer/:Gmail<br>
-
-<br>
-//Ajouter Reservation <br>
-###<br>
-
-POST localhost:8000/api/Reservation<br>
-
-Content-Type: application/json<br>
-{<br>
-        "NomUtilisateur": "Basidi",<br>
-        "NumeroCar": "1234-B-1",<br>
-        "villeDepare": "Safi",<br>
-        "DateDepart": "2022-11-10",<br>
-        "NumeroPlace": "4",<br>
-        "hoursDepart": "12:12",<br>
-        "Prix": "100",<br>
-        "villeCollections": "Rabat"<br>
-
-}<br>
-<br>
-// Aficher Reservation<br>
-###<br>
-GET localhost:8000/api/Reservation<br>
-<br>
-// SUprimer Reservation<br>
-<br>
-DELETE localhost:8000/api/Reservation/:_id <br>
-<br>
-
-// Moudifier Reservation    <br>
-###<br>
-PUT localhost:8000/api/Reservation/:_id<br>
-
-<br>
-// TYPES
-<br>
-###<br>
-//Aficher Les Types De Car<br>
-GET localhost:8000/api/Type<br>
-<br>
-// Ajouter les Types~<br>
-###<br>
-POST localhost:8000/api/Type<br>
-Content-Type: application/json<br>
-{<br>
-     "Type_Name": "Huv1",<br>
-   "Date_Creation": "2022-06-06",<br>
-   "Prix": "10000",<br>
-   "Detalles":["6384af9ff34a59c11555dff7","6384b034f34a59c11555dffa","6384b051f34a59c11555dffd"]<br>
-   
-}<br>
-<br>
-
-
-//DETALLES<br>
-
-// Aficher les Detalles<br>
-###<br>
-GET localhost:8000/api/detalles<br>
-
-<br
-// Ajouter les Detalles<br>
-###<br>
-
-POST localhost:8000/api/detalles<br>
-
-Content-Type: application/json<br>
-{<br>
-     "Keys": "2",<br>
-   "Nom_Value": "Min",<br>
-   "Value": "100"
-   <br>
-}<br>
