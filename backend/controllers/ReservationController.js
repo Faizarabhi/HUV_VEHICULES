@@ -1,5 +1,4 @@
-
-const Reservation = require('../models/ReservationModel');
+const Reservation = require('../models/ReservationModel')
 const nodemailer = require('nodemailer');
 const Email = process.env.Email
 const Pass = process.env.PASS
@@ -33,18 +32,21 @@ const AddReservation = async (req,res)=>{
     }
 
     const DeleteReservation = async (req,res)=>{
-        const Reserver = await Reservation.findById(req.params.id)
-        res.status(200).json(Reserver)
-   
+
+
+
+        const Reserve = await Reservation.findById(req.params.id)
         if(!Reserve){
             res.status(400)
             throw new Error('Reservation Not found')
         }
-            await Reservation.remove()
+        
+     
+    
+        await Reservation.remove()
         res.status(200).json({id : req.params.id})
-         }
     
-    
+    }
 
     
 
@@ -54,13 +56,13 @@ const AddReservation = async (req,res)=>{
         const transporter = nodemailer.createTransport({
         service: 'outlook',
         auth: {
-            user: Email,
-            pass: Pass
+            user: 'Namx-Huv@outlook.com',
+            pass: 'Ayoub1998@@'
         }
     });
 
         const email = {
-            from: Email,
+            from: 'Namx-Huv@outlook.com',
             to: req.params.Email,
             subject: 'Confirmation reserver sur Car Nmax',
             text: ' la réservation a été bien reçu'
@@ -81,8 +83,6 @@ const AddReservation = async (req,res)=>{
   
    
 
-
-   
 
 
 
