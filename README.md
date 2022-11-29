@@ -76,7 +76,7 @@ Le projet est livré avec de nombreuses fonctionnalités intégrées, telles que
 
 - Authentification avec [JWT](https://www.npmjs.com/package/jsonwebtoken) : fournissant à la fois un jeton d'accès et un jeton de rafraîchissement (envoyé sous forme de cookie http sécurisé uniquement et enregistré dans la base de données).
 - Système de connexion unifié pour la prise en charge de plusieurs rôles d'utilisateurs.
-- Validation utilisant [Joi](https://joi.dev/).
+- Validation utilisant [nodemailer](https://nodemailer.com/).
 - Gestion des erreurs et méthode personnalisée de capture des erreurs.
 - Population optionnelle, sélection des champs à remplir et des champs à renvoyer par les requêtes GET.
 - Plus de détails ci-dessous...
