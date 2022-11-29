@@ -117,7 +117,7 @@ POST http://localhost:8000/api/detalles
 Content-Type: application/json
 
 {
-    "Keys": "11",
-    "Nom_Value": "Horsepower",
-    "Value": "700"
+    "Keys": "16",
+    "Nom_Value": "max",
+    "Value": "150"
 }
