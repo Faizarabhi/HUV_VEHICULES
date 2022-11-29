@@ -48,8 +48,36 @@ la demande du CEO & Founder at NamX c'est de partage l'expérience immersive de 
  
 ![HUV_VEHICULES Social Banner](https://www.namx-hydrogen.com/img/home/suv-hydrogene-1920w.webp)
 
+  
+# Introduction
 
+Create a maintainable and scalable Node.js REST API with  Express and Mongoose.
 
+The project structure is based on MVC and follows it's basic principles but is a little bit different in which instead of having the entities logic spread out into specific folders (models folder containing all models, controllers folder containing all controllers etc...).
+
+Each entity has it's own folder containing all it's core logic . Let's take the `User` entity as an example:
+
+```
+backend
+└── entities
+    └── controllers
+        ├── userController.js
+    └── models
+        ├── userModel.js 
+    └── routes
+         └── userRouter.js
+```
+
+Grâce à cette structure, il est plus facile de maintenir et de faire évoluer plusieurs entités (vous aurez rarement à passer d'un dossier à l'autre pour gérer une entité).
+
+Le projet est livré avec de nombreuses fonctionnalités intégrées, telles que :
+
+- Authentification avec [JWT](https://www.npmjs.com/package/jsonwebtoken) : fournissant à la fois un jeton d'accès et un jeton de rafraîchissement (envoyé sous forme de cookie http sécurisé uniquement et enregistré dans la base de données).
+- Système de connexion unifié pour la prise en charge de plusieurs rôles d'utilisateurs.
+- Validation utilisant [Joi](https://joi.dev/).
+- Gestion des erreurs et méthode personnalisée de capture des erreurs.
+- Population optionnelle, sélection des champs à remplir et des champs à renvoyer par les requêtes GET.
+- Plus de détails ci-dessous...
 ### Certifications
 
 
@@ -57,7 +85,7 @@ la demande du CEO & Founder at NamX c'est de partage l'expérience immersive de 
 ### Built With
 Cette section doit énumérer tous les principaux frameworks/bibliothèques utilisés pour lancer votre projet. Laissez les add-ons/plugins pour la section remerciements. Voici quelques exemples.
 
-* [![React][React.js]][React-url]
+* [![express][express.js]][express-url]
 
 ### Commande line 
 ```sh
