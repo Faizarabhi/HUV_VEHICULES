@@ -1,5 +1,7 @@
 const Reservation = require('../models/ReservationModel')
 const nodemailer = require('nodemailer');
+const Email = process.env.Email
+const Pass = process.env.PASS
 
 
 
