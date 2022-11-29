@@ -118,8 +118,9 @@ POST http://localhost:8000/api/detalles
 Content-Type: application/json
 
 {
-     "Keys": "2",
-   "Nom_Value": "Min",
-   "Value": "100"
-   
+
+    "Keys": "16",
+    "Nom_Value": "max",
+    "Value": "150"
+
 }
