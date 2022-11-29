@@ -31,14 +31,11 @@ const Reservation = new Schema(
             type: String, 
             require: true
         },
-        DateDebut : { 
+        Date : { 
             type: Date, 
             require: true
         },
-        DateFin : { 
-            type: Date, 
-            require: true
-        },
+       
         status : {
             type: Boolean,
             require: true

@@ -55,26 +55,26 @@ POST http://localhost:8000/api/Reservation/Confirmer/:Gmail
 ###
 
 POST http://localhost:8000/api/Reservation
-
 Content-Type: application/json
+
 {
-        "NomUtilisateur": "Basidi",
-        "NumeroCar": "1234-B-1",
-        "villeDepare": "Safi",
-        "DateDepart": "2022-11-10",
-        "NumeroPlace": "4",
-        "hoursDepart": "12:12",
-        "Prix": "100",
-        "villeCollections": "Rabat"
+    "UserName": "Ayoub benouahi",
+    "Adress": "HAy Moulay rachid khemisset",
+    "City": "khemisset",
+    "state":"Rabat",
+    "Zip":"13525",
+    "Country":"Country",
+    "Type":"Huv1",
+    "Date": 
 
 }
 
 // Aficher Reservation
-
+###
 GET http://localhost:8000/api/Reservation
 
 // SUprimer Reservation
-
+###
 DELETE http://localhost:8000/api/Reservation/:_id 
 
 
@@ -113,8 +113,6 @@ GET http://localhost:8000/api/detalles
 
 // Ajouter les Detalles
 ###
-
-POST localhost:8000/api/detalles
 
 POST http://localhost:8000/api/detalles
 Content-Type: application/json

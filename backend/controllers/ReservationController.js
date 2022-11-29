@@ -15,7 +15,7 @@ const getReservation = async(req,res)=>{
 }
 
 const AddReservation = async (req,res)=>{
-       console.LOG(req)
+       console.log('req')
         // const Reserve = await Reservation.create({
         //     UserName: req.body.UserName,
         //     Adress: req.body.Adress,
@@ -24,11 +24,11 @@ const AddReservation = async (req,res)=>{
         //     Zip: req.body.Zip,
         //     Country: req.body.Country,
         //     Type: req.body.Type,
-        //     DateDebut: req.body.DateDebut,
-        //     DateFin: req.body.DateFin
+        //     Date: req.body.Date,
+        //
 
         // })
-        res.status(200).json(Reserve)
+        // res.status(200).json(Reserve)
     }
 
     const DeleteReservation = async (req,res)=>{
