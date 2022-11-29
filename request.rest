@@ -41,18 +41,25 @@ Content-Type: application/json
 
 {
     "Name": "Nmax",
-    "Type": "6386130d0f39e3039985d968"
+
+   "Type": "6384d6cdd6a1438f7ac78411"
+
+  
+
    
 }
 
 // RESERVATION
 ###
 //Confirmtion reservation sur email
-POST http://localhost:8000/api/Reservation/Confirmer/:Gmail
+
+POST localhost:8000/api/Reservation/Confirmer/:Email
+
+
 
 
 //Ajouter Reservation 
-###
+### 
 
 POST http://localhost:8000/api/Reservation
 
@@ -95,6 +102,11 @@ POST http://localhost:8000/api/Type
 Content-Type: application/json
 
 {
+
+   "Type_Name": "Huv",
+   "Date_Creation": "2022-06-06",
+   "Prix": "10000",
+   "Detalles":["6384af9ff34a59c11555dff7","6384b034f34a59c11555dffa","6384b051f34a59c11555dffd"]
     "Type_Name": "bot5",
     "Date_Creation": "2022-06-06",
     "Prix": "10000",
@@ -104,7 +116,7 @@ Content-Type: application/json
 
 
 
-//DETALLES
+//DETAIlS
 
 // Aficher les Detalles
 ###
@@ -120,6 +132,9 @@ POST http://localhost:8000/api/detalles
 Content-Type: application/json
 
 {
+
+  
+
 
     "Keys": "16",
     "Nom_Value": "max",
