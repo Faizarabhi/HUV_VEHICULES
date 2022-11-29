@@ -38,9 +38,10 @@ GET http://localhost:8000/api/cars
 ###
 POST http://localhost:8000/api/cars
 Content-Type: application/json
+
 {
-     "Name": "Nmax",
-   "Type": "6384d6cdd6a1438f7ac78411"
+    "Name": "Nmax",
+    "Type": "6386130d0f39e3039985d968"
    
 }
 
@@ -70,33 +71,34 @@ Content-Type: application/json
 
 // Aficher Reservation
 
-GET localhost:8000/api/Reservation
+GET http://localhost:8000/api/Reservation
 
 // SUprimer Reservation
 
-DELETE localhost:8000/api/Reservation/:_id 
+DELETE http://localhost:8000/api/Reservation/:_id 
 
 
 // Moudifier Reservation    
 ###
-PUT localhost:8000/api/Reservation/:_id
+PUT http://localhost:8000/api/Reservation/:_id
 
 
 // TYPES
 
 ###
 //Aficher Les Types De Car
-GET localhost:8000/api/Type
+GET http://localhost:8000/api/Type
 
 // Ajouter les Types~
 ###
-POST localhost:8000/api/Type
+POST http://localhost:8000/api/Type
 Content-Type: application/json
+
 {
-     "Type_Name": "Huv1",
-   "Date_Creation": "2022-06-06",
-   "Prix": "10000",
-   "Detalles":["6384af9ff34a59c11555dff7","6384b034f34a59c11555dffa","6384b051f34a59c11555dffd"]
+    "Type_Name": "bot5",
+    "Date_Creation": "2022-06-06",
+    "Prix": "10000",
+    "Detalles":["63860fb91be8e42bb37760f6","63860fcb1be8e42bb37760fc"]
    
 }
 
