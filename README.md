@@ -26,8 +26,10 @@ la demande du CEO & Founder at NamX c'est de partage l'expérience immersive de 
 ## Table of Contents
 
 - [Certifications](#certifications)
-- [Commandeline](#commandeline)
-- [Built With](#built)
+- [Commande line ](#Commande_line )
+- [Usage](#Usage)
+- [Directory Structure](#Directory_Structure)
+- [API Endpoints](#API_Endpoints)
 
  <!-- TABLE OF CONTENTS -->
 <details>
@@ -131,7 +133,7 @@ Then:
 npm  start
 ```
 
-The database should be connected and your server should be running. You can start testing and querying the API.
+La base de données doit être connectée et votre serveur doit être en cours d'exécution. Vous pouvez commencer à tester et à interroger l'API.
 
 ```bash
 npm run start
