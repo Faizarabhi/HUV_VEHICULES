@@ -1,4 +1,5 @@
-const Reservation = require('../models/ReservationModel')
+
+const Reservation = require('../models/ReservationModel');
 const nodemailer = require('nodemailer');
 const Email = process.env.Email
 const Pass = process.env.PASS
@@ -32,21 +33,18 @@ const AddReservation = async (req,res)=>{
     }
 
     const DeleteReservation = async (req,res)=>{
-
-
-
-        const Reserve = await Reservation.findById(req.params.id)
+        const Reserver = await Reservation.findById(req.params.id)
+        res.status(200).json(Reserver)
+   
         if(!Reserve){
             res.status(400)
             throw new Error('Reservation Not found')
         }
-        
-     
-    
-        await Reservation.remove()
+            await Reservation.remove()
         res.status(200).json({id : req.params.id})
+         }
     
-    }
+    
 
     
 
@@ -83,6 +81,8 @@ const AddReservation = async (req,res)=>{
   
    
 
+
+   
 
 
 
