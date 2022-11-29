@@ -39,6 +39,10 @@ const Reservation = new Schema(
             type: Date, 
             require: true
         },
+        status : {
+            type: Boolean,
+            require: true
+        }
         
     }
 )

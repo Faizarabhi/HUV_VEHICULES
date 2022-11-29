@@ -6,16 +6,21 @@ const Type = new Schema(
         
         Type_Name : { 
             type: String, 
-            require: true
+            require: true,
+            unique: true
         },
         Date_Creation : {
             type : Date,
             require: true
         },
-        Detalles: {
-            type: Object,
+        Prix : {
+            type : Number,
+            require: true
+        },
+        Detalles: [{
+            type: String,
             required: true
-        }
+        }]
         
     }
 )

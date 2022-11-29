@@ -1,20 +1,23 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 
 const {
     registerAdmin, 
-    loginAdmin
+    loginAdmin,
+    getDataAdmin,
 } = require('../controllers/adminController')
 
-router.post('/register',registerAdmin)
-router.post('/login',loginAdmin)
-
-    // const {protect} =  require('../middleware/authMiddleware')
 
 
+const {protect,} =  require('../middlewar/authMiddlewar')
+
+router.post('/register',registerAdmin);
+router.post('/login',loginAdmin);
+router.get('/displayMe', protect, getDataAdmin);
 
 
-module.exports = router
+
+module.exports = router;
 
 
 

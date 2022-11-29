@@ -50,6 +50,94 @@ Content-Type: application/json
 
 
 // CAR 
+###
+GET localhost:8000/api/cars
 
+
+// Ajouter les car
+###
+POST localhost:8000/api/cars
+Content-Type: application/json
+{
+     "Name": "Nmax",
+   "Type": "6384d6cdd6a1438f7ac78411"
+   
+}
 
 // RESERVATION
+###
+//Confirmtion reservation sur email
+POST localhost:8000/api/Reservation/Confirmer/:Gmail
+
+
+//Ajouter Reservation 
+###
+
+POST localhost:8000/api/Reservation
+
+Content-Type: application/json
+{
+        "NomUtilisateur": "Basidi",
+        "NumeroCar": "1234-B-1",
+        "villeDepare": "Safi",
+        "DateDepart": "2022-11-10",
+        "NumeroPlace": "4",
+        "hoursDepart": "12:12",
+        "Prix": "100",
+        "villeCollections": "Rabat"
+
+}
+
+// Aficher Reservation
+
+GET localhost:8000/api/Reservation
+
+// SUprimer Reservation
+
+DELETE localhost:8000/api/Reservation/:_id 
+
+
+// Moudifier Reservation    
+###
+PUT localhost:8000/api/Reservation/:_id
+
+
+// TYPES
+
+###
+//Aficher Les Types De Car
+GET localhost:8000/api/Type
+
+// Ajouter les Types~
+###
+POST localhost:8000/api/Type
+Content-Type: application/json
+{
+     "Type_Name": "Huv1",
+   "Date_Creation": "2022-06-06",
+   "Prix": "10000",
+   "Detalles":["6384af9ff34a59c11555dff7","6384b034f34a59c11555dffa","6384b051f34a59c11555dffd"]
+   
+}
+
+
+
+//DETALLES
+
+// Aficher les Detalles
+###
+GET localhost:8000/api/detalles
+
+
+// Ajouter les Detalles
+###
+
+POST localhost:8000/api/detalles
+
+Content-Type: application/json
+{
+     "Keys": "2",
+   "Nom_Value": "Min",
+   "Value": "100"
+   
+}

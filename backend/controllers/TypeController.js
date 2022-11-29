@@ -1,10 +1,20 @@
 const Type = require('../models/TypeModel')
+const Detalles = require('../models/DetallesModel')
 
 
 
 const getType = async(req,res)=>{
     try{
         const Types = await Type.find();
+        for(let j=0;j<Types.length;j++){
+        console.log(Types[j].Type_Name)
+        let Tayeps = Types[j].Detalles;
+        for (let i=0; i<Tayeps.length; i++){
+            let Det = await Detalles.find({_id:Types[0].Detalles[i]});
+            console.log(Det[0].Nom_Value+' : '+ Det[0].Value);
+        }
+    }
+      
         res.json(Types);
           }catch(err){
             res.json({message: err});
@@ -13,32 +23,19 @@ const getType = async(req,res)=>{
 
 const AddType = async (req,res)=>{
        
+
         const Types = await Type.create({
-           Type_Name: req.body.UserName,
+           Type_Name: req.body.Type_Name,
            Date_Creation: req.body.Date_Creation,
+           Prix: req.body.Prix,
            Detalles: req.body.Detalles
-
-
         })
         res.status(200).json(Types)
     }
 
-    const DeleteTypes = async (req,res)=>{
 
-
-
-        const Types = await Type.findById(req.params.id)
-        if(!Types){
-            res.status(400)
-            throw new Error('Reservation Not found')
-        }
-        
-     
+   
     
-        await Type.remove()
-        res.status(200).json({id : req.params.id})
-    
-    }
     
   
    
@@ -50,4 +47,4 @@ const AddType = async (req,res)=>{
 
 
 
-module.exports = {AddType , getType , DeleteTypes }
+module.exports = {AddType , getType  }
