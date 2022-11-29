@@ -106,18 +106,18 @@ Content-Type: application/json
 
 // Aficher les Detalles
 ###
-GET localhost:8000/api/detalles
+GET http://localhost:8000/api/detalles
 
 
 // Ajouter les Detalles
 ###
 
-POST localhost:8000/api/detalles
 
+POST http://localhost:8000/api/detalles
 Content-Type: application/json
+
 {
-     "Keys": "2",
-   "Nom_Value": "Min",
-   "Value": "100"
-   
+    "Keys": "11",
+    "Nom_Value": "Horsepower",
+    "Value": "700"
 }
