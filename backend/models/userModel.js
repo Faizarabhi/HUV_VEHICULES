@@ -33,6 +33,13 @@ const userSchema = mongoose.Schema({
     country : {
         type : String,
         require : [true, 'Please add country']
+    },
+    isActive :{
+        type : Boolean,
+        default: false
+    },
+    activationCode: {
+        type : String
     }
 },
 {

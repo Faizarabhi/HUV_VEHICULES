@@ -18,10 +18,12 @@ const Type = new Schema(
             require: true
         },
         Detalles: [{
-            type: String,
+            type: Schema.Types.ObjectId,
+            ref: 'Detalles',
             required: true
         }]
         
+
     }
 )
 module.exports = mongoose.model('Type',Type)

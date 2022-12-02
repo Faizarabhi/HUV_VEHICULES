@@ -62,6 +62,8 @@ Each entity has it's own folder containing all it's core logic . Let's take the 
 ```
 backend
 └── entities
+    └── helpers
+        └──nodemailer.js
     └── controllers
         ├── userController.js
     └── models

@@ -8,9 +8,10 @@ const carSchema = new Schema(
             require: true
         },
         Type : {
-            type: String,
+            type : Schema.Types.ObjectId,
+            ref: 'Type',
             require: true
         }
     }
 )
-module.exports = mongoose.model('Car',carSchema)
+module.exports = mongoose.model('Car',carSchema) 
