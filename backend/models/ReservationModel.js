@@ -7,6 +7,10 @@ const Reservation = new Schema(
             type: String, 
             require: true
         },
+        Email:{
+            type: String,
+            require: true
+        },
         Adress : { 
             type: String, 
             require: true
@@ -31,12 +35,11 @@ const Reservation = new Schema(
             type: String, 
             require: true
         },
-        Date : { 
-            type: Date, 
-            require: true
-        },
 
-        
+       Date:{ 
+        type : Date,
+        require: true
+       },
 
         status : {
             type: Boolean,

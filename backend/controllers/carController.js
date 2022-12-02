@@ -2,7 +2,7 @@ const Car = require("../models/carModel");
 
 const getCars = async (req, res) => {
   try {
-    const care = await Car.find();
+    const care = await Car.find().populate('Type');
     res.json(care);
   } catch (err) {
     res.json({ message: err });
@@ -10,6 +10,8 @@ const getCars = async (req, res) => {
 };
 
 const AddCar = async (req, res) => {
+  
+  console.log(req.body.Name);
   const Cars = await Car.create({
     Name: req.body.Name,
     Type: req.body.Type,
