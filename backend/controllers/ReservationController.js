@@ -4,6 +4,7 @@ const nodemailer = require("nodemailer");
 const Email = process.env.Email;
 const Pass = process.env.PASS;
 
+
 const getReservation = async (req, res) => {
   try {
     const reserve = await Reservation.find();
@@ -15,11 +16,15 @@ const getReservation = async (req, res) => {
 
 const AddReservation = async (req, res) => {
   var today = new Date();
+
+
+
     var Day = today.getDate();
     var month = today.getMonth()+1;
     var yers = today.getFullYear();
 
     today = yers+'-'+month+'-'+Day;
+
   const Reserve = await Reservation.create({
     UserName: req.body.UserName,
     Email: req.body.Email,
@@ -94,7 +99,7 @@ module.exports = {
   SendConfirmation,
 };
 
-
+      
 
 
 

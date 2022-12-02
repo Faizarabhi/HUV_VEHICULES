@@ -35,10 +35,12 @@ const Reservation = new Schema(
             type: String, 
             require: true
         },
+
        Date:{ 
         type : Date,
         require: true
        },
+
         status : {
             type: Boolean,
             require: true
