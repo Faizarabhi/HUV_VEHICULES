@@ -8,7 +8,12 @@ const { sendConfirmationEmail } = require('../helpers/nodemailer')
 
 
 
-
+const verifyUser =  asyncHandler(async(req,res)=>{
+  const user = await User.findOne({activationCode : req.params.activationCode})
+  await User.findByIdAndUpdate(user._id, {isActive : true})
+  res.send(user)
+  
+});
 const registerUser = asyncHandler(async(req,res)=>{
 
   // methode pour creer une chaine e characteres aleatoire!
@@ -81,4 +86,4 @@ const generateToken = (id) => {
     })
   }
 
-module.exports = {loginUser, registerUser}
+module.exports = {loginUser, registerUser, verifyUser}
