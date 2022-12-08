@@ -10,11 +10,13 @@ Content-Type: application/json
     "password" : "123"
 }
 ###
+POST http://localhost:8000/api/users/verifyUser/35TyuBtIb6beZDQDCrzlNgoVC
+###
 POST http://localhost:8000/api/users/register
 Content-Type: application/json
 
 {   "fullname":"user",
-    "email" : "frabhi93@gmail.com",
+    "email" : "frabhi12@gmail.com",
     "password" : "123",
     "address" : "adress3", 
     "city" : "city", 
