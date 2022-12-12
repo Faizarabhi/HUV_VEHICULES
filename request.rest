@@ -15,13 +15,13 @@ POST http://localhost:8000/api/users/verifyUser/35TyuBtIb6beZDQDCrzlNgoVC
 POST http://localhost:8000/api/users/register
 Content-Type: application/json
 
-{   "fullname":"user",
-    "email" : "frabhi12@gmail.com",
-    "password" : "123",
-    "address" : "adress3", 
-    "city" : "city", 
-    "state" : "state", 
-    "zip" : "300", 
+{   "fullname":"user2",
+    "email" : "frabhi@gmail.com",
+    "password" : "1234",
+    "address" : "adres3", 
+    "city" : "city1", 
+    "state" : "state3", 
+    "zip" : "3000", 
     "country" : "country"
 }
 

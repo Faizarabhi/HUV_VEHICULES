@@ -23,7 +23,7 @@ const registerUser = asyncHandler(async(req,res)=>{
     activationCode  += characteres[Math.floor(Math.random() * characteres.length)]
   }
     const {fullname, email, password, address, city, state, zip, country} = req.body
-    if(!fullname || !email || !password || !address || !address || !city || !state || !zip || !country){
+    if(!fullname || !email || !password || !address || !city || !state || !zip || !country){
     res.status(400) 
     throw new Error('Please add all fields')
     }
