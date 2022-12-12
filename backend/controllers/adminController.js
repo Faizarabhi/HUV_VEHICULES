@@ -7,7 +7,7 @@ const { json } = require("express");
 
 
 const registerAdmin = asyncHandler(async (req, res) => {
-  const { email, password } = req.body;
+  const { name, email, password } = req.body;
 
   if (!email || !password) {
     res.status(400);
@@ -27,12 +27,14 @@ const registerAdmin = asyncHandler(async (req, res) => {
 
   //  create user
   const admin = await Admin.create({
+    name,
     email,
     password: hashPass,
   });
   if (admin) {
     res.status(200).json({
       _id: admin.id,
+      name:admin.name,
       email: admin.email,
       token: generateToken(Admin._id),
     });
@@ -76,7 +78,7 @@ const getDataAdmin = asyncHandler(async (req, res) => {
 // Generate JWT
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
-    expiresIn: "24h",
+    expiresIn: "2d",
   });
 };
 
