@@ -2,12 +2,12 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const asyncHandler = require("express-async-handler");
 const Admin = require("../models/adminModel");
-const { json } = require("express");
-// const JWT_SECRET = require(".env");
+const { json, response } = require("express");
+
 
 
 const registerAdmin = asyncHandler(async (req, res) => {
-  const { email, password } = req.body;
+  const { name, email, password } = req.body;
 
   if (!email || !password) {
     res.status(400);
@@ -27,42 +27,58 @@ const registerAdmin = asyncHandler(async (req, res) => {
 
   //  create user
   const admin = await Admin.create({
+    name,
     email,
     password: hashPass,
   });
-  if (admin) {
-    res.status(200).json({
-      _id: admin.id,
-      email: admin.email,
-      token: generateToken(Admin._id),
-    });
-  } else {
-    res.status(400).json({
-      status: false,
-    });
-  }
+  return res.status(200).json({
+    admin: admin
+  });
+  // if (admin) {
+  //   res.status(200).json({
+  //     _id: admin.id,
+  //     name:admin.name ,
+  //     email: admin.email,
+  //     token: generateToken(Admin._id),
+  //   });
+  // } else {
+  //   res.status(400).json({
+  //     status: false,
+  //   });
+  // }
 });
 // Authentificate a user
 // POST /api/users/login
 const loginAdmin = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
-
   // check email
-  const admin = await Admin.findOne({ email });
-  if (admin && (await bcrypt.compare(password, admin.password))) {
-    res
-      .json({
-        _id: admin.id,
-        email: admin.email,
-        token: generateToken(admin._id),
-        status: true,
-      })
-      .status(200);
-  } else {
-    res.status(400).json({
-      status: false,
-    });
+  const admin = await Admin.findOne({email});
+ if(admin){
+  const validpassword = await bcrypt.compare(password, admin.password)
+  if (!validpassword){
+    res.json({message: 'Invalid password'});
+  }else{
+    res.json({
+      admin: admin,
+      token: generateToken(admin._id),
+    })
   }
+ }else{
+  res.json({message: 'email is not valid'});
+ }
+  // res.json({admin: admin});
+  // if (admin) {
+  //   res.json({
+  //       _id: admin.id,
+  //       email: admin.email,
+  //       token: generateToken(admin._id),
+  //       status: true,
+  //     }).status(200);
+  // } else {
+  //   res.status(400).json({
+  //     status: false,
+  //   });
+  // }
 });
 
 const getDataAdmin = asyncHandler(async (req, res) => {
@@ -76,7 +92,7 @@ const getDataAdmin = asyncHandler(async (req, res) => {
 // Generate JWT
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
-    expiresIn: "24h",
+    expiresIn: "2d",
   });
 };
 
