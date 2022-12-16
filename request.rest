@@ -30,13 +30,14 @@ Content-Type: application/json
 
 // CAR 
 ###
-POST http://localhost:8000/api/admin/register
+POST http://localhost:8000/api/admins/register
 Content-Type: application/json
 
-{
+{  "name" : "admin",
     "email" : "admin@gmail.com",
-    "password" : "123",
+    "password" : "123"
 }
+
 
 ###
 POST http://localhost:8000/api/admin/login
@@ -44,7 +45,7 @@ Content-Type: application/json
 
 {
     "email" : "admin@gmail.com",
-    "password" : "123",
+    "password" : "123"
 }
 
 
