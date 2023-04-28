@@ -178,7 +178,7 @@ List of available routes:
 `GET /api/admins` - get all admins\
 `GET /api/admins/:id` - get admin by id\
 `PATCH /api/admins/:id` - update admin\
-`DELETE /api/admins/:id` - delete admin\
+`DELETE /api/admins/:id` - delete admin
 
 [Back to table of Contents](#table-of-contents)
 
